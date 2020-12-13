@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://brick_splosion.gd" type="Script" id=1]
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 2
+emission_box_extents = Vector3( 1, 1, 1 )
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+
+[node name="BrickSplosion" type="Node2D"]
+script = ExtResource( 1 )
+box_extents = Vector3( 1, 1, 1 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+process_material = SubResource( 1 )

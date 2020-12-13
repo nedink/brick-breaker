@@ -1,0 +1,85 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://BasicBrick.tscn" type="PackedScene" id=1]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.0
+
+[node name="Level" type="Node2D"]
+
+[node name="Groups" type="Node2D" parent="."]
+
+[node name="1" parent="Groups" instance=ExtResource( 1 )]
+position = Vector2( 56, 40 )
+physics_material_override = SubResource( 1 )
+
+[node name="2" parent="Groups" instance=ExtResource( 1 )]
+position = Vector2( 96, 40 )
+physics_material_override = SubResource( 1 )
+
+[node name="3" parent="Groups" instance=ExtResource( 1 )]
+position = Vector2( 136, 40 )
+physics_material_override = SubResource( 1 )
+
+[node name="4" parent="Groups" instance=ExtResource( 1 )]
+position = Vector2( 56, 56 )
+physics_material_override = SubResource( 1 )
+
+[node name="5" parent="Groups" instance=ExtResource( 1 )]
+position = Vector2( 96, 56 )
+physics_material_override = SubResource( 1 )
+
+[node name="6" parent="Groups" instance=ExtResource( 1 )]
+position = Vector2( 136, 56 )
+physics_material_override = SubResource( 1 )
+
+[node name="7" parent="Groups" instance=ExtResource( 1 )]
+position = Vector2( 56, 72 )
+physics_material_override = SubResource( 1 )
+
+[node name="8" parent="Groups" instance=ExtResource( 1 )]
+position = Vector2( 96, 72 )
+physics_material_override = SubResource( 1 )
+
+[node name="9" parent="Groups" instance=ExtResource( 1 )]
+position = Vector2( 136, 72 )
+physics_material_override = SubResource( 1 )
+
+[node name="Groups2" type="Node2D" parent="."]
+position = Vector2( 288, 0 )
+
+[node name="1" parent="Groups2" instance=ExtResource( 1 )]
+position = Vector2( 56, 40 )
+physics_material_override = SubResource( 1 )
+
+[node name="2" parent="Groups2" instance=ExtResource( 1 )]
+position = Vector2( 96, 40 )
+physics_material_override = SubResource( 1 )
+
+[node name="3" parent="Groups2" instance=ExtResource( 1 )]
+position = Vector2( 136, 40 )
+physics_material_override = SubResource( 1 )
+
+[node name="4" parent="Groups2" instance=ExtResource( 1 )]
+position = Vector2( 56, 56 )
+physics_material_override = SubResource( 1 )
+
+[node name="5" parent="Groups2" instance=ExtResource( 1 )]
+position = Vector2( 96, 56 )
+physics_material_override = SubResource( 1 )
+
+[node name="6" parent="Groups2" instance=ExtResource( 1 )]
+position = Vector2( 136, 56 )
+physics_material_override = SubResource( 1 )
+
+[node name="7" parent="Groups2" instance=ExtResource( 1 )]
+position = Vector2( 56, 72 )
+physics_material_override = SubResource( 1 )
+
+[node name="8" parent="Groups2" instance=ExtResource( 1 )]
+position = Vector2( 96, 72 )
+physics_material_override = SubResource( 1 )
+
+[node name="9" parent="Groups2" instance=ExtResource( 1 )]
+position = Vector2( 136, 72 )
+physics_material_override = SubResource( 1 )
