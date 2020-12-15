@@ -2,6 +2,9 @@ extends Node2D
 
 class_name Main
 
+
+export var level = 1
+
 enum State {
 	SERVE,
 	PLAY
@@ -16,8 +19,12 @@ var ball_spawner_scene = preload("res://BallSpawner.tscn")
 
 
 func _ready():
-	set_state(State.SERVE)
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	set_state(State.SERVE)
+	
+	var level_scene = load("res://levels/" + str(level) + ".tscn")
+	var level = level_scene.instance()
+	add_child(level)
 
 
 

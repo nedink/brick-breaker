@@ -2,7 +2,7 @@
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://Paddle.tscn" type="PackedScene" id=2]
-[ext_resource path="res://levels/1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://balls_left.gd" type="Script" id=3]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -22,7 +22,7 @@ __meta__ = {
 }
 
 [node name="Paddle" parent="." instance=ExtResource( 2 )]
-position = Vector2( 224, 288 )
+position = Vector2( 224, 264 )
 
 [node name="Walls" type="Node2D" parent="."]
 
@@ -32,4 +32,6 @@ physics_material_override = SubResource( 1 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls/StaticBody2D"]
 polygon = PoolVector2Array( 0, 0, 0, 320, -20, 320, -20, -20, 500, -20, 500, 320, 480, 320, 480, 0 )
 
-[node name="Level" parent="." instance=ExtResource( 3 )]
+[node name="BallsLeft" type="Position2D" parent="."]
+visible = false
+script = ExtResource( 3 )

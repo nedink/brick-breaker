@@ -32,6 +32,6 @@ script = ExtResource( 3 )
 
 [node name="Line2D" type="Line2D" parent="Indicator"]
 position = Vector2( -8, 0 )
-points = PoolVector2Array( 16, 0, 320, 0 )
+points = PoolVector2Array( 16, 0, 480, 0 )
 width = 1.0
 default_color = Color( 1, 1, 1, 1 )

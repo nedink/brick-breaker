@@ -2,21 +2,25 @@ extends KinematicBody2D
 
 class_name Paddle
 
+var displace:float
+var movement:Vector2
 
 
 func _physics_process(delta):
-	var displace = $MouseMotionTracker.global_position.x - global_position.x
-
-	var movement = move_and_slide(Vector2(displace / delta, 0))
-	
-	
-	
-#func _integrate_forces(state):
-#	var displace = $MouseMotionTracker.global_position.x - global_position.x
-#
-#	state.linear_velocity = Vector2(displace / state.step, 0)
+	if Input.is_action_pressed("right"):
+		displace = 1
+	if Input.is_action_pressed("left"):
+		displace = -1
+	if displace:
+		movement = move_and_slide(Vector2(displace / delta, 0))
+		displace = 0
+		
 
 
+func _input(event):
+	if event is InputEventMouseMotion:
+		displace = event.relative.x
+#		displace = get_global_mouse_position().x - global_position.x
 
 
 
